@@ -1,0 +1,70 @@
+body {
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+.stack-area {
+  width: 100%;
+  height: 300vh;  /* 4 cards * 75vh */
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.right,
+.left {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  flex-basis: 50%;
+}
+.cards {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.card {
+  width: 350px;
+  height: 350px;
+  box-sizing: border-box;
+  padding: 35px;
+  border-radius: 6mm;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: 0.5s ease-in-out;
+}
+.card:nth-child(1) {
+  background: rgb(255, 179, 64);
+  z-index: 4;
+}
+.card:nth-child(2) {
+  background: rgb(221, 62, 88);
+  z-index: 3;
+}
+.card:nth-child(3) {
+  background: rgb(113, 245, 113);
+  z-index: 2;
+}
+.card:nth-child(4) {
+  background: rgb(107, 92, 247);
+  z-index: 1;
+}
+.card.active {
+  transform-origin: bottom left;
+}
+
+/*CSS Code for responsiveness*/
+@media screen and (max-width: 800px) {
+  .left {
+    position: relative;
+    width: 100vw;
+  }
+}
