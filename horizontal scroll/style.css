@@ -4,7 +4,7 @@
 
 .cards {
   width: 100%;
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: 0 auto;
   display: grid;
   grid-template-rows: repeat(var(--cards-count), var(--card-height));
@@ -14,14 +14,10 @@
 .card {
   position: sticky;
   top: 0;
-}
-
-.card__inner {
   padding: 60px;
   will-change: transform;
   background: white;
   border-radius: 14px;
-  display: flex;
   overflow: hidden;
   box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
   transform-origin: center top;
@@ -40,7 +36,7 @@
 }
 
 @media (max-width: 600px) {
-  .card__inner {
+  .card {
     flex-direction: column;
   }
 
